@@ -1,5 +1,5 @@
 # Flask-App-Password-Generator
-Simple flask app to generate secure pronouncable passwords locally.
+Simple flask app to generate secure pronouncable passwords locally. E.g. -> *Talented-Labor-Newly-6*
 
 ## Instructions
 In the directory with all folders run using *python app.py* \
