@@ -1,0 +1,86 @@
+<!-- <button onClick="window.location.reload();">Refresh Page</button> -->
+
+
+<!doctype html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/main.css') }}">
+    <!-- <script type='text/javascript' src="/templates/script.js"></script> -->
+
+    <!-- <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+
+
+
+    <style>
+        .center {
+            text-align: center;
+            margin-top: 6cm;
+            margin-bottom: 6cm;
+        }
+
+        button {
+            border: none;
+            outline: none;
+            background-color: rgb(255, 255, 204);
+            color: black;
+            font-weight: bold;
+            padding: 10px;
+        }
+
+        input {
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="center">
+
+        <h2>PASSWORD GENERATOR</h2>
+        <!-- <p id='p1'>Your password is : {{ phrase }}</p> -->
+
+
+        <!-- <input type="text" value= id="myInput"> -->
+
+        <!-- The button used to copy the text -->
+        <!-- <button onclick="myFunction()">Copy text</button> -->
+        <input type="text" value={{phrase}} class="textInput" size="24" />
+        <p>The password has {{len}} characters</p>
+
+        <button class="copy">Copy to clipboard</button>
+
+        <script>document.querySelector(".copy").addEventListener("click", copyText);
+            function copyText() {
+                var copyText = document.querySelector(".textInput");
+                copyText.select();
+                copyText.setSelectionRange(0, 99999);
+                document.execCommand("copy");
+                alert("Your password is : " + copyText.value);
+            }</script>
+
+        <!-- <input type="button" onclick="copyText();" name="ok" value={{phrase}} /> -->
+
+
+
+        <br><br><button onClick="window.location.reload();">Generate new password</button>
+        <br>
+        <p>You can check strngth of your password on below websites : </p>
+        <a href=" https://password.kaspersky.com/" target=" _blank">Check password strength on
+            Kaspersky website</a>
+        <br><a href=" https://www.my1login.com/resources/password-strength-test/" target="_blank">Check password
+            strength
+            on
+            my1login website</a>
+        <br><a href="https://howsecureismypassword.net/" target="_blank">Check password strength on
+            howsecureismypassword</a>
+    </div>
+
+
+</body>
+
+
+</html>
